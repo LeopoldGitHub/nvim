@@ -54,4 +54,11 @@ use {
 use {
         'altercation/vim-colors-solarized'
 }
+use{
+        'luochen1990/rainbow'
+}
+use  {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
 end)

@@ -129,4 +129,3 @@ noremap <LEADER>sc :set spell!<CR>
 
 " ----
 noremap \s :%s//g<left><left>
-

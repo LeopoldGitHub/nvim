@@ -61,4 +61,17 @@ use  {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
+use {
+        'tpope/vim-dadbod'
+}
+use{
+        'kristijanhusak/vim-dadbod-ui'
+}
+use {
+        'kristijanhusak/vim-dadbod-completion'
+}
+use {
+        'hiphish/rainbow-delimiters.nvim'
+
+}
 end)

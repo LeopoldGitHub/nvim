@@ -72,6 +72,8 @@ use {
 }
 use {
         'hiphish/rainbow-delimiters.nvim'
-
+}
+use {
+        'stevearc/oil.nvim'
 }
 end)

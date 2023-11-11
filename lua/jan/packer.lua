@@ -76,4 +76,7 @@ use {
 use {
         'stevearc/oil.nvim'
 }
+use {
+        'elentok/format-on-save.nvim'
+}
 end)

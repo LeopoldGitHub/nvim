@@ -63,9 +63,12 @@ noremap <silent> E 5jzz
 noremap <silent> N 0
 " I key: go to the end of the line
 noremap <silent> I $
+" switch w and b
+noremap w b
+noremap b w
 " Faster in-line navigation
-noremap W 5w
-noremap B 5b
+noremap W 5b
+noremap B 5w
 " set h (same as n, cursor left) to 'end of word'
 noremap h e
 " Ctrl + U or E will move up/down the view port without moving the cursor

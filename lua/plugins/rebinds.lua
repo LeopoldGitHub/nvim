@@ -20,4 +20,17 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- add ctr+s to save while in insert mode
 vim.keymap.set("i", "WW", "<Esc>:w<CR>")
+-- insert curly braces and jump into them
+vim.keymap.set("i", "<c-y>", "<ESC>A {}<ESC>i<CR><ESC>ko")
+
+--switch w and b
+vim.keymap.set({ "n", "v" }, "w", "b")
+vim.keymap.set({ "n", "v" }, "b", "w")
+vim.keymap.set({ "n", "v" }, "W", "5b")
+vim.keymap.set({ "n", "v" }, "B", "5w")
+
+vim.keymap.set({ "n", "v" }, "j", "h")
+vim.keymap.set({ "n", "v" }, "h", "j")
+vim.keymap.set({ "n", "v" }, "H", "5jzz")
+vim.keymap.set({ "n", "v" }, "K", "5kzz")
 return {}

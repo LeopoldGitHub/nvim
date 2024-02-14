@@ -12,6 +12,6 @@ return {
                 vim.keymap.set("n","<C-k>",function() ui.nav_file(2) end)
                 vim.keymap.set("n","<C-h>",function() ui.nav_file(3) end)
                 require("telescope").load_extension('harpoon')
-                vim.keymap.set("n","<C-i>",function() vim.cmd('Telescope harpoon marks') end)
+                vim.keymap.set("n","<C-t>",function() vim.cmd('Telescope harpoon marks') end)
         end
 }

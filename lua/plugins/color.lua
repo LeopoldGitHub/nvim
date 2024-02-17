@@ -1,5 +1,6 @@
 return
 {
+        {
         "catppuccin/nvim",
         lazy = false,
         name = "catppuccin",
@@ -39,6 +40,8 @@ return
                         },
                 })
 
+
+
                 vim.cmd.colorscheme "catppuccin"
                 local links = {
                         ['@lsp.type.namespace'] = '@namespace',
@@ -72,12 +75,23 @@ return
                         ['@lsp.typemod.macro.defaultLibrary.rust'] = '@function.macro',
                         ['@lsp.typemod.macro.library.rust'] = '@function.macro',
                         ['@lsp.typemod.decorator'] = '@function',
-
                 }
                 for newgroup, oldgroup in pairs(links) do
                         vim.api.nvim_set_hl(0, newgroup, { link = oldgroup, default = true })
                 end
         end
-
-
+},
+--{
+--        "folke/tokyonight.nvim",
+--        lazy = false,
+--        priority = 1000,
+--        config = function()
+--                require("tokyonight").setup({
+--
+--                style = "storm"
+--                })
+--                vim.cmd.colorscheme "tokyonight"
+--        end
+--}
+--
 }

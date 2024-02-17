@@ -23,6 +23,9 @@ return {
                                 require("lspconfig")[server_name].setup {}
                         end
                 })
+                vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+                        border = "rounded",
+                })
                 local cmp = require "cmp"
                 cmp.setup({
                         snippet = {
@@ -47,7 +50,6 @@ return {
                                 { {
                                         name = "buffer" }, })
                 })
-
         end
 
 

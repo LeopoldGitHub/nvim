@@ -11,6 +11,7 @@ return
                         catppuccin.setup({
                                 flavour = "mocha",
                                 integrations = {
+                                        mason = false,
                                         rainbow_delimiters = true,
                                         semantic_tokens = true,
                                         cmp = true,
@@ -34,7 +35,7 @@ return
                                                         information = { "underline" },
                                                 },
                                                 inlay_hints = {
-                                                        background = true,
+                                                        background = false,
                                                 },
                                         },
                                 },

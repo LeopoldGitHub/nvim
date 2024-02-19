@@ -20,7 +20,14 @@ return {
                 })
                 require("mason-lspconfig").setup_handlers({
                         function(server_name)
-                                require("lspconfig")[server_name].setup {}
+                                require("lspconfig")[server_name].setup({
+--                                        on_attach = function(client, buffer)
+--                                                if server_name == "rust_analyzer" then
+--                                                        print(server_name, buffer)
+--                                                        vim.lsp.inlay_hint.enable(buffer,true)
+--                                                end
+--                                        end
+                                })
                         end
                 })
                 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {

@@ -9,8 +9,6 @@ return {
                 "hrsh7th/cmp-path",
                 "hrsh7th/cmp-cmdline",
                 "hrsh7th/nvim-cmp",
-                -- "hrsh7th/cmp-vsnip",
-                -- "hrsh7th/vim-vsnip",
                 "L3MON4D3/LuaSnip",
                 build = "make install_jsregexp",
                 "onsails/lspkind.nvim"
@@ -78,10 +76,13 @@ return {
                         mapping = cmp.mapping.preset.insert({
                                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                                ['<c-n>'] = cmp.mapping.select_next_item(),
+                                ['<c-l>'] = cmp.mapping.select_prev_item(),
                                 ['<C-Space>'] = cmp.mapping.complete(),
                                 ['<C-e>'] = cmp.mapping.abort(),
                                 ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                         }),
+
 
                         sources = cmp.config.sources({
                                 { name = "luasnip" },

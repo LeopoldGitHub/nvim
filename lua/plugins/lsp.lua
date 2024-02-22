@@ -13,7 +13,9 @@ return {
                 build = "make install_jsregexp",
                 "onsails/lspkind.nvim"
         },
+
         config = function()
+                local capabilities = vim.lsp.protocol.make_client_capabilities()
                 require("mason").setup()
                 require("mason-lspconfig").setup({
                         ensure_installed = { "lua_ls"
@@ -23,12 +25,15 @@ return {
                 require("mason-lspconfig").setup_handlers({
                         function(server_name)
                                 require("lspconfig")[server_name].setup({
-                                        --                                        on_attach = function(client, buffer)
-                                        --                                                if server_name == "rust_analyzer" then
-                                        --                                                        print(server_name, buffer)
-                                        --                                                        vim.lsp.inlay_hint.enable(buffer,true)
-                                        --                                                end
-                                        --                                        end
+                                        capabilities = capabilities,
+
+--                                        on_attach = function(client, buffer)
+--                                                if server_name == "rust_analyzer" then
+--                                                        print(server_name, buffer)
+--                                                        vim.lsp.inlay_hint.enable(buffer, true)
+--                                                end
+--                                        end
+
                                 })
                         end
                 })

@@ -83,6 +83,8 @@ return
                         end
                 end
         },
+        { "folke/tokyonight.nvim" },
+        { "rose-pine/neovim" },
         --{
         --        "folke/tokyonight.nvim",
         --        lazy = false,
